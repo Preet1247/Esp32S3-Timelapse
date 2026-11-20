@@ -2,7 +2,6 @@
 <WatchFace width="454" height="454" clipShape="CIRCLE">
   <Metadata key="CLOCK_TYPE" value="HYBRID"/>
   <Scene backgroundColor="#ff0b0d12">
-    <Variant mode="AMBIENT" target="backgroundColor" value="#ff000000"/>
 
     <!-- Minute / hour ticks (12 long, 48 short) -->
     <Group x="0" y="0" width="454" height="454" name="ticks">
@@ -525,9 +524,7 @@
     <DigitalClock x="147" y="268" width="160" height="56">
       <Localization calendar="GREGORIAN" timeZone="SYNC_TO_DEVICE"/>
       <TimeText x="0" y="0" width="160" height="56" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
-        <Font family="SYNC_TO_DEVICE" size="44" weight="BOLD" color="#ff4fc3f7">
-          <Variant mode="AMBIENT" target="color" value="#ff9aa0a6"/>
-        </Font>
+        <Font family="SYNC_TO_DEVICE" size="44" weight="BOLD" color="#ff4fc3f7"/>
       </TimeText>
     </DigitalClock>
 

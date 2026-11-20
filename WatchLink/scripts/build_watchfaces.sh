@@ -28,6 +28,17 @@ APK_SRC="$(ls -1 sample-watchface/build/outputs/apk/release/*.apk | head -n 1)"
 [ -f "$APK_SRC" ] || { echo "ERROR: watch face APK not found" >&2; exit 1; }
 cp "$APK_SRC" "$APK_OUT"
 echo "APK: $APK_OUT ($(wc -c < "$APK_OUT") bytes)"
+# AGP always emits classes.dex (R class) even with hasCode=false, but Watch Face Push only
+# allows manifest, resources.arsc, res/** and META-INF/**. Strip it and re-sign.
+if unzip -l "$APK_OUT" | grep -q "classes.dex"; then
+  BT="$(ls -d "${ANDROID_HOME:-$ANDROID_SDK_ROOT}"/build-tools/* | sort -V | tail -n 1)"
+  zip -q -d "$APK_OUT" classes.dex
+  "$BT/zipalign" -f -p 4 "$APK_OUT" "$APK_OUT.aligned" && mv "$APK_OUT.aligned" "$APK_OUT"
+  "$BT/apksigner" sign --ks keystore/watchlink-dev.jks --ks-pass pass:watchlink \
+    --ks-key-alias watchlink --key-pass pass:watchlink "$APK_OUT"
+  rm -f "$APK_OUT.idsig"
+  echo "Stripped classes.dex and re-signed with $BT/apksigner"
+fi
 unzip -l "$APK_OUT" > "$OUT_DIR/watchface-contents.txt" || true
 
 TOKEN="VALIDATION_FAILED"
