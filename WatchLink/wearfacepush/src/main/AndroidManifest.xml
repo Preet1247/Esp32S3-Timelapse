@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Watch Face Push -->
+    <uses-permission android:name="com.google.wear.permission.PUSH_WATCH_FACES" />
+    <uses-permission android:name="com.google.wear.permission.SET_PUSHED_WATCH_FACE_AS_ACTIVE" />
+
+    <application>
+        <!--
+            Validation token of the marketplace default watch face. The default watch face APK itself
+            must be in the app's assets as "default_watchface.apk" (copied there by
+            scripts/build_watchfaces.sh, together with default_watchface_token.txt). The string
+            resource below is (re)written by that script; a placeholder is committed so the build
+            works before the script has run.
+        -->
+        <meta-data
+            android:name="com.google.android.wearable.marketplace.DEFAULT_WATCHFACE_VALIDATION_TOKEN"
+            android:value="@string/default_wf_token" />
+    </application>
+</manifest>

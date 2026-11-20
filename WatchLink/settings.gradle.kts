@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "WatchLink"
-include(":shared", ":mobile", ":wear", ":sample-watchface")
+include(":shared", ":mobile", ":wear", ":sample-watchface", ":wearfacepush")

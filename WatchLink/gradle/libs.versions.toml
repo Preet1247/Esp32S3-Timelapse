@@ -10,7 +10,7 @@ wearInput = "1.1.0"
 playServicesWearable = "19.0.0"
 coroutines = "1.10.2"
 serialization = "1.8.1"
-watchfacepush = "1.0.0-alpha01"
+watchfacepush = "1.0.0"
 material = "1.12.0"
 
 [libraries]

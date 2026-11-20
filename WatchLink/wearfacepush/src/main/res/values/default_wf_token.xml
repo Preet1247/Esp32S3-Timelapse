@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Placeholder. Overwritten by scripts/build_watchfaces.sh with the real validation token. -->
+<resources>
+    <string name="default_wf_token" translatable="false">VALIDATION_FAILED</string>
+</resources>

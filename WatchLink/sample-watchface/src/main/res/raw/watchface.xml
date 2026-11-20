@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WatchFace width="454" height="454" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="HYBRID"/>
+  <Scene backgroundColor="#ff0b0d12">
+    <Variant mode="AMBIENT" target="backgroundColor" value="#ff000000"/>
+
+    <!-- Minute / hour ticks (12 long, 48 short) -->
+    <Group x="0" y="0" width="454" height="454" name="ticks">
+      <Variant mode="AMBIENT" target="alpha" value="120"/>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick0">
+        <Transform target="angle" value="0"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="224" y="8" width="6" height="26" cornerRadiusX="3" cornerRadiusY="3">
+            <Fill color="#ffffffff"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick1">
+        <Transform target="angle" value="6"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick2">
+        <Transform target="angle" value="12"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick3">
+        <Transform target="angle" value="18"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick4">
+        <Transform target="angle" value="24"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick5">
+        <Transform target="angle" value="30"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="224" y="8" width="6" height="26" cornerRadiusX="3" cornerRadiusY="3">
+            <Fill color="#ffffffff"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick6">
+        <Transform target="angle" value="36"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick7">
+        <Transform target="angle" value="42"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick8">
+        <Transform target="angle" value="48"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick9">
+        <Transform target="angle" value="54"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick10">
+        <Transform target="angle" value="60"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="224" y="8" width="6" height="26" cornerRadiusX="3" cornerRadiusY="3">
+            <Fill color="#ffffffff"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick11">
+        <Transform target="angle" value="66"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick12">
+        <Transform target="angle" value="72"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick13">
+        <Transform target="angle" value="78"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick14">
+        <Transform target="angle" value="84"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick15">
+        <Transform target="angle" value="90"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="224" y="8" width="6" height="26" cornerRadiusX="3" cornerRadiusY="3">
+            <Fill color="#ffffffff"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick16">
+        <Transform target="angle" value="96"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick17">
+        <Transform target="angle" value="102"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick18">
+        <Transform target="angle" value="108"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick19">
+        <Transform target="angle" value="114"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick20">
+        <Transform target="angle" value="120"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="224" y="8" width="6" height="26" cornerRadiusX="3" cornerRadiusY="3">
+            <Fill color="#ffffffff"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick21">
+        <Transform target="angle" value="126"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick22">
+        <Transform target="angle" value="132"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick23">
+        <Transform target="angle" value="138"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick24">
+        <Transform target="angle" value="144"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick25">
+        <Transform target="angle" value="150"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="224" y="8" width="6" height="26" cornerRadiusX="3" cornerRadiusY="3">
+            <Fill color="#ffffffff"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick26">
+        <Transform target="angle" value="156"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick27">
+        <Transform target="angle" value="162"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick28">
+        <Transform target="angle" value="168"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick29">
+        <Transform target="angle" value="174"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick30">
+        <Transform target="angle" value="180"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="224" y="8" width="6" height="26" cornerRadiusX="3" cornerRadiusY="3">
+            <Fill color="#ffffffff"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick31">
+        <Transform target="angle" value="186"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick32">
+        <Transform target="angle" value="192"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick33">
+        <Transform target="angle" value="198"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick34">
+        <Transform target="angle" value="204"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick35">
+        <Transform target="angle" value="210"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="224" y="8" width="6" height="26" cornerRadiusX="3" cornerRadiusY="3">
+            <Fill color="#ffffffff"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick36">
+        <Transform target="angle" value="216"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick37">
+        <Transform target="angle" value="222"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick38">
+        <Transform target="angle" value="228"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick39">
+        <Transform target="angle" value="234"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick40">
+        <Transform target="angle" value="240"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="224" y="8" width="6" height="26" cornerRadiusX="3" cornerRadiusY="3">
+            <Fill color="#ffffffff"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick41">
+        <Transform target="angle" value="246"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick42">
+        <Transform target="angle" value="252"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick43">
+        <Transform target="angle" value="258"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick44">
+        <Transform target="angle" value="264"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick45">
+        <Transform target="angle" value="270"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="224" y="8" width="6" height="26" cornerRadiusX="3" cornerRadiusY="3">
+            <Fill color="#ffffffff"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick46">
+        <Transform target="angle" value="276"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick47">
+        <Transform target="angle" value="282"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick48">
+        <Transform target="angle" value="288"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick49">
+        <Transform target="angle" value="294"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick50">
+        <Transform target="angle" value="300"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="224" y="8" width="6" height="26" cornerRadiusX="3" cornerRadiusY="3">
+            <Fill color="#ffffffff"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick51">
+        <Transform target="angle" value="306"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick52">
+        <Transform target="angle" value="312"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick53">
+        <Transform target="angle" value="318"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick54">
+        <Transform target="angle" value="324"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick55">
+        <Transform target="angle" value="330"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="224" y="8" width="6" height="26" cornerRadiusX="3" cornerRadiusY="3">
+            <Fill color="#ffffffff"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick56">
+        <Transform target="angle" value="336"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick57">
+        <Transform target="angle" value="342"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick58">
+        <Transform target="angle" value="348"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="tick59">
+        <Transform target="angle" value="354"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="226" y="8" width="2" height="12" cornerRadiusX="1" cornerRadiusY="1">
+            <Fill color="#ff8a8f98"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+    </Group>
+
+    <!-- Numerals 12 / 3 / 6 / 9 -->
+    <Group x="0" y="0" width="454" height="454" name="numerals">
+      <PartText x="197" y="44" width="60" height="44" name="num12">
+        <Text align="CENTER" ellipsis="FALSE">
+          <Font family="SYNC_TO_DEVICE" size="34" weight="BOLD" color="#ffffffff">12</Font>
+        </Text>
+      </PartText>
+      <PartText x="354" y="205" width="60" height="44" name="num3">
+        <Text align="CENTER" ellipsis="FALSE">
+          <Font family="SYNC_TO_DEVICE" size="34" weight="BOLD" color="#ffffffff">3</Font>
+        </Text>
+      </PartText>
+      <PartText x="197" y="366" width="60" height="44" name="num6">
+        <Text align="CENTER" ellipsis="FALSE">
+          <Font family="SYNC_TO_DEVICE" size="34" weight="BOLD" color="#ffffffff">6</Font>
+        </Text>
+      </PartText>
+      <PartText x="40" y="205" width="60" height="44" name="num9">
+        <Text align="CENTER" ellipsis="FALSE">
+          <Font family="SYNC_TO_DEVICE" size="34" weight="BOLD" color="#ffffffff">9</Font>
+        </Text>
+      </PartText>
+    </Group>
+
+    <!-- Date (top) -->
+      <PartText x="137" y="120" width="180" height="36" name="date">
+        <Variant mode="AMBIENT" target="alpha" value="0"/>
+        <Text align="CENTER" ellipsis="FALSE">
+          <Font family="SYNC_TO_DEVICE" size="26" weight="NORMAL" color="#ffb8c0cc"><Template>%s %d<Parameter expression="[DAY_OF_WEEK_S]"/><Parameter expression="[DAY]"/></Template></Font>
+        </Text>
+      </PartText>
+
+    <!-- Digital time (bottom) -->
+    <DigitalClock x="147" y="268" width="160" height="56" name="digital">
+      <Localization calendar="GREGORIAN" timeZone="SYNC_TO_DEVICE"/>
+      <TimeText x="0" y="0" width="160" height="56" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+        <Font family="SYNC_TO_DEVICE" size="44" weight="BOLD" color="#ff4fc3f7">
+          <Variant mode="AMBIENT" target="color" value="#ff9aa0a6"/>
+        </Font>
+      </TimeText>
+    </DigitalClock>
+
+    <!-- Battery and steps -->
+      <PartText x="112" y="176" width="110" height="34" name="battery">
+        <Variant mode="AMBIENT" target="alpha" value="0"/>
+        <Text align="CENTER" ellipsis="FALSE">
+          <Font family="SYNC_TO_DEVICE" size="24" weight="NORMAL" color="#ff7ee08a"><Template>%d%%<Parameter expression="[BATTERY_PERCENT]"/></Template></Font>
+        </Text>
+      </PartText>
+      <PartText x="232" y="176" width="130" height="34" name="steps">
+        <Variant mode="AMBIENT" target="alpha" value="0"/>
+        <Text align="CENTER" ellipsis="FALSE">
+          <Font family="SYNC_TO_DEVICE" size="24" weight="NORMAL" color="#fffbc02d"><Template>%d steps<Parameter expression="[STEP_COUNT]"/></Template></Font>
+        </Text>
+      </PartText>
+
+    <!-- Hands -->
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="hourHand">
+        <Transform target="angle" value="[HOUR_0_11_MINUTE] * 30"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="221" y="112" width="12" height="127" cornerRadiusX="6" cornerRadiusY="6">
+            <Fill color="#fffafafa"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="minuteHand">
+        <Transform target="angle" value="[MINUTE_SECOND] * 6"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="223" y="56" width="8" height="183" cornerRadiusX="4" cornerRadiusY="4">
+            <Fill color="#ffe0e0e0"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+      <Group x="0" y="0" width="454" height="454" pivotX="0.5" pivotY="0.5" name="secondHand">
+        <Transform target="angle" value="[SECOND_MILLISECOND] * 6"/>
+        <Variant mode="AMBIENT" target="alpha" value="0"/>
+        <PartDraw x="0" y="0" width="454" height="454">
+          <RoundRectangle x="225.5" y="36" width="3" height="215" cornerRadiusX="1.5" cornerRadiusY="1.5">
+            <Fill color="#ffff5252"/>
+          </RoundRectangle>
+        </PartDraw>
+      </Group>
+    <PartDraw x="0" y="0" width="454" height="454" name="hub">
+      <Ellipse x="218" y="218" width="18" height="18">
+        <Fill color="#ffff5252"/>
+      </Ellipse>
+    </PartDraw>
+  </Scene>
+</WatchFace>
