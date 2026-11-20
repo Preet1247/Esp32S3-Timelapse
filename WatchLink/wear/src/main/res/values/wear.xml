@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Must equal com.watchlink.shared.Capabilities.WATCH -->
+    <string-array name="android_wear_capabilities">
+        <item>watchlink_watch</item>
+    </string-array>
+</resources>

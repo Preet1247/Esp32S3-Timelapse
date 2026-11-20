@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".WatchLinkApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WatchLink">
+
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="false" />
+
+        <!-- Companion-dependent app (needs the phone app for all features). -->
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".IncomingCallActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:showWhenLocked="true"
+            android:taskAffinity=""
+            android:turnScreenOn="true" />
+
+        <receiver
+            android:name=".NotificationActionReceiver"
+            android:exported="false" />
+
+        <service
+            android:name=".WatchListenerService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/notif" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/call" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/settings" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/watchface" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/ping" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/pong" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.CHANNEL_EVENT" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/notif" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/call" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/settings" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/watchface" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/ping" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/pong" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>
