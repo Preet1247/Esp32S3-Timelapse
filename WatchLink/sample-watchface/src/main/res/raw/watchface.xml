@@ -522,7 +522,7 @@
       </PartText>
 
     <!-- Digital time (bottom) -->
-    <DigitalClock x="147" y="268" width="160" height="56" name="digital">
+    <DigitalClock x="147" y="268" width="160" height="56">
       <Localization calendar="GREGORIAN" timeZone="SYNC_TO_DEVICE"/>
       <TimeText x="0" y="0" width="160" height="56" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
         <Font family="SYNC_TO_DEVICE" size="44" weight="BOLD" color="#ff4fc3f7">

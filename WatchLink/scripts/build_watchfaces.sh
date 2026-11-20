@@ -28,6 +28,7 @@ APK_SRC="$(ls -1 sample-watchface/build/outputs/apk/release/*.apk | head -n 1)"
 [ -f "$APK_SRC" ] || { echo "ERROR: watch face APK not found" >&2; exit 1; }
 cp "$APK_SRC" "$APK_OUT"
 echo "APK: $APK_OUT ($(wc -c < "$APK_OUT") bytes)"
+unzip -l "$APK_OUT" > "$OUT_DIR/watchface-contents.txt" || true
 
 TOKEN="VALIDATION_FAILED"
 

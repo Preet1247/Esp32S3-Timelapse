@@ -6,6 +6,10 @@ plugins {
 }
 
 android {
+    lint {
+        // False positive: we use ComponentActivity (no Fragment dependency at all).
+        disable += "InvalidFragmentVersionForActivityResult"
+    }
     namespace = "com.watchlink.wear"
     compileSdk = 36
 

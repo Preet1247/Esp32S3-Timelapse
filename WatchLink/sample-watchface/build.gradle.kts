@@ -28,11 +28,18 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
+            vcsInfo { include = false }
             signingConfig = signingConfigs.getByName("watchlink")
         }
         debug {
             signingConfig = signingConfigs.getByName("watchlink")
         }
+    }
+
+    // Watch Face Push only allows manifest, resources.arsc, res/** and META-INF/** in the APK.
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
     }
 
     lint {
