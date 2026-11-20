@@ -1,5 +1,6 @@
 package com.watchlink.wear.ui
 
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -125,9 +126,12 @@ fun HomeScreen(
 private fun NotificationCard(notification: NotificationPayload, onClick: () -> Unit) {
     val context = LocalContext.current
     val icon = rememberBase64Image(notification.appIconPng)
-    val appImage: (@Composable () -> Unit)? = icon?.let { bitmap ->
-        @Composable { CircleImage(bitmap = bitmap, size = 16.dp) }
-    }
+    val appImage: (@Composable RowScope.() -> Unit)? =
+        if (icon != null) {
+            { CircleImage(bitmap = icon, size = 16.dp) }
+        } else {
+            null
+        }
 
     AppCard(
         onClick = onClick,

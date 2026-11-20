@@ -35,6 +35,9 @@ jobs:
           cp wear/build/outputs/apk/release/*.apk dist/WatchLink-watch.apk 2>/dev/null || true
           cp -r build/watchfaces/* dist/ 2>/dev/null || true
           ls -la dist
+      - name: Show watch face validator output
+        if: always()
+        run: cat build/watchfaces/validator.log 2>/dev/null | tail -n 60 || echo "no validator log"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -53,11 +53,12 @@ validate() {
     fi
   fi
   echo "==> Running validator $version"
-  out="$(java -jar "$jar" --apk_path="$APK_OUT" --package_name="$MARKETPLACE_PACKAGE" 2>&1)" || {
-    echo "$out" >&2
-    return 1
-  }
+  mkdir -p "$OUT_DIR"
+  local rc=0
+  out="$(java -jar "$jar" --apk_path="$APK_OUT" --package_name="$MARKETPLACE_PACKAGE" 2>&1)" || rc=$?
+  { echo "validator $version exit=$rc"; echo "$out"; } > "$OUT_DIR/validator.log"
   echo "$out"
+  [ "$rc" -eq 0 ] || return 1
   # Output format: a line like "Validation token: <token>" (fall back to a lone token-looking line).
   token="$(printf '%s\n' "$out" | sed -n 's/^.*[Tt]oken[^:=]*[:=][[:space:]]*\([^[:space:]]\{16,\}\)[[:space:]]*$/\1/p' | tail -n 1)"
   if [ -z "$token" ]; then
