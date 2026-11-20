@@ -1,0 +1,41 @@
+name: WatchLink APKs
+
+on:
+  push:
+    paths:
+      - "WatchLink/**"
+      - ".github/workflows/watchlink.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: WatchLink
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Build sample watch face + validation token
+        run: |
+          if [ -x scripts/build_watchfaces.sh ]; then scripts/build_watchfaces.sh; else echo "no watch face script yet"; fi
+      - name: Build phone + watch APKs
+        run: ./gradlew --stacktrace :mobile:assembleRelease :wear:assembleRelease
+      - name: Collect APKs
+        if: always()
+        run: |
+          mkdir -p dist
+          cp mobile/build/outputs/apk/release/*.apk dist/WatchLink-phone.apk 2>/dev/null || true
+          cp wear/build/outputs/apk/release/*.apk dist/WatchLink-watch.apk 2>/dev/null || true
+          cp -r build/watchfaces/* dist/ 2>/dev/null || true
+          ls -la dist
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WatchLink-apks
+          path: WatchLink/dist/
